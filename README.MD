@@ -1,6 +1,6 @@
 # terminews
 
-#### We're back! Recently refreshed and expanded to include simple testing to avoid future down time. Enjoy the news, once again, right from your terminal.
+#### We're back (now only one dependency - Cheerio.js, no intentional breakfast theme)! Recently refreshed and expanded to include simple testing to avoid future down time. Enjoy the news, once again, right from your terminal.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)

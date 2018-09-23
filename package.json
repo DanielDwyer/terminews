@@ -12,10 +12,16 @@
   "preferGlobal": "true",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielDwyer/termiNews.git"
+    "url": "https://github.com/DanielDwyer/terminews2.git"
   },
   "keywords": [
-    "na"
+    "news",
+    "newspaper",
+    "headlines",
+    "current",
+    "today",
+    "terminaltimes",
+    "terminews",
   ],
   "author": "danielpatrickdwyer@gmail.com",
   "license": "MIT",
