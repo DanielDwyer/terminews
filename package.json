@@ -12,7 +12,7 @@
   "preferGlobal": "true",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielDwyer/terminews2.git"
+    "url": "https://github.com/DanielDwyer/terminews.git"
   },
   "keywords": [
     "news",
