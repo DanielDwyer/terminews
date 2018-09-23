@@ -1,4 +1,5 @@
 const https = require('https')
+const generateRandom = require('./user_agent_generator')
 
 function httpsRequest(params, postData) {
     return new Promise(function(resolve, reject) {
@@ -38,7 +39,7 @@ function httpsRequest(params, postData) {
 const reporter = () => {
 
   const headers = {
-    'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G36 Safari/601.1'
+    'User-Agent': generateRandom.userAgent()
   }
 
   const options = {

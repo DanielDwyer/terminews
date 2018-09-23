@@ -10,7 +10,8 @@
 
 I absolutely love keeping up with all the news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Don't leave your desk. Enjoy!
 
- **read random news right from your terminal**.
+ **read random news headlines right from your terminal**.
+ **to read an article, just hold down command and click the link**
 
 
 ## Getting Started
