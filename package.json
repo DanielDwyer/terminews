@@ -1,0 +1,29 @@
+{
+  "name": "terminews",
+  "version": "0.0.0",
+  "description": "read the latest news headlines from your terminal window",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "bin": {
+    "news": "index.js"
+  },
+  "preferGlobal": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielDwyer/termiNews.git"
+  },
+  "keywords": [
+    "na"
+  ],
+  "author": "danielpatrickdwyer@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
