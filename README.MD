@@ -1,6 +1,6 @@
 # terminews
 
-#### Recently refreshed and expanded to include simple testing to avoid future down time. Enjoy the news, once again, right from your terminal.
+#### We're back! Recently refreshed and expanded to include simple testing to avoid future down time. Enjoy the news, once again, right from your terminal.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)
@@ -10,8 +10,9 @@
 
 I absolutely love keeping up with all the news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Don't leave your desk. Enjoy!
 
- **read random news headlines right from your terminal**.
- **to read an article, just hold down command and click the link**
+ **Read random news headlines right from your terminal**.
+
+ **To read an article, just hold down command and click the link**.
 
 
 ## Getting Started
@@ -30,9 +31,13 @@ $ news
 ```
 
 
-## Example
+## Example Response
 
 ![example news](http://i66.tinypic.com/k3xh0h.png)
+
+## Seeking Input & Help
+
+I want to expand and grow this repo. I would love to incorporate some search filters via flags (i.e. -nopolitics or -sports) and style the terminal. Each article has a corresponding section (i.e. life or real estate) and style could be derived from that status. Lastly, I want to bring in more news papers. Thanks!
 
 ## License
 
