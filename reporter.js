@@ -20,6 +20,10 @@ function httpsRequest(params, postData) {
                 } catch(e) {
                     reject(e);
                 }
+                /*
+                NOTE - Access html that needs parsing here (body is a JS string)
+                */
+                //console.log("/n/n",body,"/n/n");
                 resolve(body);
             });
         });
