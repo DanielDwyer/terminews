@@ -81,10 +81,11 @@ const startThePresses = () => {
 }
 
 const findArticleFlag = args => {
-  let numberOfArticles = ''
+  let numberOfArticles;
   if (args[1].charAt(0) === '-') numberOfArticles = args[1].slice(1)
   if (args[2].charAt(0) === '-') numberOfArticles = args[2].slice(1)
-  return numberOfArticles
+  // make sure arg is a number
+  return isNaN(numberOfArticles) ? null : numberOfArticles
 }
 
 startThePresses()
