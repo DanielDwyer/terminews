@@ -2,6 +2,7 @@
 
 var getnews = require('./reporter')
 var editnews = require('./editor')
+var { findArticleFlag } = require('./utilities')
 
 console.log(`
   ___________                  .__
@@ -32,7 +33,7 @@ const startThePresses = () => {
           newspaper[top] = tmp;
         }
 
-        for(var z = 0; z < /*newspaper.length*/10; z++){
+        for(var z = 0; z < numberOfArticles; z++){
           var  title = ''
           var link = ''
           var titleLength = 0
@@ -78,14 +79,6 @@ const startThePresses = () => {
   })
   .catch((e) => {/*getnews.reporter level error*/ console.log('1catch.e:',e)})
 
-}
-
-const findArticleFlag = args => {
-  let numberOfArticles;
-  if (args[1].charAt(0) === '-') numberOfArticles = args[1].slice(1)
-  if (args[2].charAt(0) === '-') numberOfArticles = args[2].slice(1)
-  // make sure arg is a number
-  return isNaN(numberOfArticles) ? null : numberOfArticles
 }
 
 startThePresses()
