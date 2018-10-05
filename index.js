@@ -15,6 +15,8 @@ console.log(`
 
 const startThePresses = () => {
 
+  let numberOfArticles = findArticleFlag(process.argv)
+
   getnews.reporter().then((result) => {
     //getnews.reporter level
     editnews.editor(result).then((newspaper) => {
@@ -76,6 +78,13 @@ const startThePresses = () => {
   })
   .catch((e) => {/*getnews.reporter level error*/ console.log('1catch.e:',e)})
 
+}
+
+const findArticleFlag = args => {
+  let numberOfArticles = ''
+  if (args[1].charAt(0) === '-') numberOfArticles = args[1].slice(1)
+  if (args[2].charAt(0) === '-') numberOfArticles = args[2].slice(1)
+  return numberOfArticles
 }
 
 startThePresses()
