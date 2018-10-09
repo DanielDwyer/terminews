@@ -27,8 +27,13 @@ $ npm i -g terminews
 Now You Are Ready To Read the News In Your Terminal:
 
 ```shell
-$ news
+$ news -[number]
+i.e.
+$ news -4
+or
+$ news -10
 ```
+** number ** the number of articles to return.
 
 
 ## Example Response
