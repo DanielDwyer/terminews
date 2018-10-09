@@ -2,6 +2,7 @@
 
 var getnews = require('./reporter')
 var editnews = require('./editor')
+var { findArticleFlag } = require('./utilities')
 
 console.log(`
   ___________                  .__
@@ -14,6 +15,8 @@ console.log(`
   console.log("\n\n       To open a link in your browser hold command and click the link \n\n\n");
 
 const startThePresses = () => {
+
+  let numberOfArticles = findArticleFlag(process.argv)
 
   getnews.reporter().then((result) => {
     //getnews.reporter level
@@ -30,7 +33,7 @@ const startThePresses = () => {
           newspaper[top] = tmp;
         }
 
-        for(var z = 0; z < /*newspaper.length*/10; z++){
+        for(var z = 0; z < numberOfArticles; z++){
           var  title = ''
           var link = ''
           var titleLength = 0
