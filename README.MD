@@ -38,7 +38,7 @@ $ news -10
 
 ## Example Response
 
-![example news](https://ibb.co/f8mfXQs)
+![example news](https://i.ibb.co/VHXRL3s/Screen-Shot-2019-10-21-at-10-53-57-AM.png)
 
 ## Seeking Input & Help
 
