@@ -1,6 +1,6 @@
 # terminews
 
-#### We're back (now only one dependency - Cheerio.js, no intentional breakfast theme)! Recently refreshed and expanded to include simple testing to avoid future down time. Enjoy the news, once again, right from your terminal.
+####  Only one dependency - Cheerio.js! Enjoy the news,right from your terminal.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)
@@ -38,7 +38,7 @@ $ news -10
 
 ## Example Response
 
-![example news](http://i66.tinypic.com/k3xh0h.png)
+![example news](https://ibb.co/f8mfXQs)
 
 ## Seeking Input & Help
 
@@ -47,7 +47,7 @@ I want to expand and grow this repo. I would love to incorporate some search fil
 ## License
 
 MIT
-Copyright 2018 Daniel P. Dwyer <danielpatrickdwyer@gmail.com>
+Copyright 2019 Daniel P. Dwyer <danielpatrickdwyer@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
