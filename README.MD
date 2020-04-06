@@ -2,7 +2,7 @@
 
 #### Enjoy the news, right from your terminal.
 
-Read the day's headlines from your terminal. Want to read more the headlines (and using a Mac) hold command and click the link.
+Read the day's headlines from your terminal.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)
@@ -14,7 +14,7 @@ I absolutely love keeping up with all the news in our wild world. I may not agre
 
  **Read random news headlines right from your terminal**.
 
- **To read an article, just hold down command and click the link**.
+ **To read an article (for Mac users), just hold down command and click the link**.
 
 
 ## Getting Started
@@ -42,7 +42,7 @@ $ news -4
 
 ## Seeking Input & Help
 
-I want to expand and grow this repo. I would love to incorporate some search filters via flags (i.e. -nopolitics or -sports) and style the terminal. Each article has a corresponding section (i.e. life or real estate) and style could be derived from that status. Lastly, I want to bring in more news papers. Thanks!
+I want to expand and grow this repo. I would love to incorporate some search filters via flags (i.e. -no-politics or -sports) and style the terminal. Each article has a corresponding section (i.e. life or real-estate) and style could be derived from that status. Lastly, I want to bring in more news papers than just the Times. Thanks!
 
 ## License
 
