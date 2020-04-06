@@ -1,6 +1,6 @@
 {
   "name": "terminews",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "An updated version of terminews - read today's headllines from your terminal.",
   "main": "index.js",
   "scripts": {
