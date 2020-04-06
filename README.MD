@@ -1,6 +1,8 @@
 # terminews
 
-####  Only one dependency - Cheerio.js! Enjoy the news,right from your terminal.
+#### Enjoy the news, right from your terminal.
+
+Read the day's headlines from your terminal. Want to read more the headlines (and using a Mac) hold command and click the link.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)
@@ -8,7 +10,7 @@
 ![npm version](https://img.shields.io/npm/v/terminews.svg)
 ![License](https://img.shields.io/npm/l/terminews.svg)
 
-I absolutely love keeping up with all the news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Don't leave your desk. Enjoy!
+I absolutely love keeping up with all the news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Enjoy!
 
  **Read random news headlines right from your terminal**.
 
@@ -30,15 +32,13 @@ Now You Are Ready To Read the News In Your Terminal:
 $ news -[number]
 i.e.
 $ news -4
-or
-$ news -10
 ```
 ** number ** the number of articles to return.
 
 
 ## Example Response
 
-![example news](https://i.ibb.co/VHXRL3s/Screen-Shot-2019-10-21-at-10-53-57-AM.png)
+![example news](https://i.ibb.co/zV60hr5/Screen-Shot-2020-04-06-at-3-24-45-PM.png)
 
 ## Seeking Input & Help
 
@@ -47,7 +47,7 @@ I want to expand and grow this repo. I would love to incorporate some search fil
 ## License
 
 MIT
-Copyright 2019 Daniel P. Dwyer <danielpatrickdwyer@gmail.com>
+Copyright 2020 Daniel P. Dwyer <danielpatrickdwyer@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

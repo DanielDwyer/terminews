@@ -1,7 +1,7 @@
 {
   "name": "terminews",
-  "version": "2.0.7",
-  "description": "read the latest news headlines from your terminal window",
+  "version": "2.9.0",
+  "description": "An updated version of terminews - read today's headllines from your terminal.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
@@ -20,7 +20,7 @@
     "headlines",
     "current",
     "today",
-    "terminaltimes",
+    "events",
     "terminews"
   ],
   "author": "danielpatrickdwyer@gmail.com",
@@ -34,7 +34,8 @@
     }
   ],
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2"
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
