@@ -1,11 +1,13 @@
 {
   "name": "terminews",
-  "version": "2.9.3",
-  "description": "An updated version of terminews - read today's headllines from your terminal.",
+  "version": "2.9.4",
+  "description": "An updated version of terminews - read today's headlines from your terminal.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "build:commonjs": "babel index.js --out-dir dist/index.js"
+    "build:commonjs": "babel index.js --out-dir dist/index.js",
+    "build:umd": "cross-env FILE_NAME=index webpack",
+    "build:umd:min": "cross-env NODE_ENV=production npm run build:umd"
   },
   "bin": {
     "news": "dist/index.js"
@@ -29,7 +31,6 @@
   "contributors": [
     {
       "name": "Jennifer Winer",
-      "email": "",
       "url": "https://jenniferwiner.com",
       "contributions": 1
     }
@@ -43,6 +44,9 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "cross-env": "^7.0.2",
+    "mocha": "^5.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
