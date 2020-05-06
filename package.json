@@ -1,16 +1,17 @@
 {
   "name": "terminews",
-  "version": "2.9.51",
+  "version": "2.9.6",
   "description": "An updated version of terminews - read today's headlines from your terminal.",
   "main": "index.js",
   "scripts": {
+    "news": "node ./dist/index.js",
     "test": "./node_modules/.bin/mocha",
     "build:commonjs": "babel index.js --out-dir dist/index.js",
     "build:umd": "cross-env FILE_NAME=index webpack",
     "build:umd:min": "cross-env NODE_ENV=production npm run build:umd"
   },
   "bin": {
-    "news": "dist/index.js"
+    "news": "./bin/index.js"
   },
   "preferGlobal": "true",
   "repository": {
