@@ -1,6 +1,6 @@
 {
   "name": "terminews",
-  "version": "2.9.72",
+  "version": "2.9.73",
   "description": "Read today's headlines in your terminal, paired with links to bring you to each story.",
   "main": "index.js",
   "scripts": {
