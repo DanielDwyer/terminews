@@ -1,7 +1,9 @@
 // required modules
 const fetch = require("node-fetch");
 let cheerio = require('cheerio');
+const { findArticleFlag } = require("./utilities");
 
+// logo
 console.log(`
   ___________                  .__
   \\\__    ___/__________  _____ |__| ____   ______  _  ________
@@ -9,9 +11,10 @@ console.log(`
     |    |\\\  ___/|  | \\\/  Y Y  \\\  |   |  \\\  ___/\\\     /\\\___ \\\\
     |____| \\\___  >__|  |__|_|  /__|___|  /\\\___  >\\\/\\\_//____  >`);
 
-console.log("\n\n       TERMINEWS - READ THE HEADLINES IN YOUR TERMINAL ");
+console.log("\n\n       TERMINEWS - READ THE HEADLINES IN YOUR TERMINAL");
 console.log("\n\n       To open a link in your browser hold command and click the link \n\n\n");
 
+// user agent provider
 const getUserAgent = () => {
   var userAgents = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
@@ -149,46 +152,33 @@ const getUserAgent = () => {
   return userAgents[Math.floor(Math.random() * Math.floor(userAgents.length)) + 1];
 };
 
-// terminews can be invoked with a numeric flag (i.e. news -10)
-// the flag represents the number of articles to return, maximum is 30
-const findArticleFlag = args => {
-  let flag;
-  if (args[1] && args[1].charAt(0) === '-') flag = args[1].slice(1)
-  else if (args[2] && args[2].charAt(0) === '-') flag = args[2].slice(1)
-  // make sure arg is a number
-  let numberOfArticles = new Number(flag);
-  if (numberOfArticles == 0 || isNaN(numberOfArticles) || numberOfArticles > 10) numberOfArticles = 30
-  return numberOfArticles
-}
-
-// make an HTTP GET request using node-fetch
+// get the news
 const getData = async url => {
   try {
-    const headers = {
-      'User-Agent': getUserAgent(),
-    };
+    const headers = { 'User-Agent': getUserAgent() };
     const options = {
       headers,
       method: 'GET'
     };
     const response = await fetch(url, options);
-    const parsedResponse = await response.text();
-    return parsedResponse;
+    if (response.status !== 200) console.error('\n\n**Non-200 status code received. Status:', response.statusCode);
+    return response.text();
   } catch (error) {
-    throw new Error('Error in getData. Error:', error);
+    console.error(`\n\n**Error in getData. Error: ${error}`);
   }
 };
 
-// edit and format the http response
+// edit and format the news
 const editData = (stories) => new Promise((resolve, reject) => {
   let formattedData = [];
   let $ = cheerio.load(stories);
   try {
+    // must use 'function' to retain scopped access to this, do not use arrow function
     $('a').each(function (i, elem) {
       const title = $(this).text().replace(/  /g, '').replace(/(\r\n|\n|\r)/gm, "");
       const link = $(this).attr('href');
       if (
-        // news article will have the date of publication present in the url
+        // news articles have the date (code looks for year, YYYY) of publication present in the url
         link.indexOf(new Date(Date.now()).getFullYear()) > -1 &&
         title.search('comments') === -1 &&
         title.length > 3
@@ -198,14 +188,15 @@ const editData = (stories) => new Promise((resolve, reject) => {
       resolve(formattedData);
     })
   } catch (e) {
-    reject(new Error(e));
+    console.error(`\n\n**Error in editData. Error: ${e}`);
+    reject(`\n\n**Error in editData. Error: ${e}`);
   }
 });
 
 // display the articles in the terminal
 const displayData = (news) => {
   let numberOfArticles = findArticleFlag(process.argv);
-  var tmp, current, top = news.length;
+  let tmp, current, top = news.length;
   if (top)
     while (--top) {
       current = Math.floor(Math.random() * (top + 1));
@@ -215,34 +206,34 @@ const displayData = (news) => {
     }
 
   for (var z = 0; z < numberOfArticles; z++) {
-    var title = ''
-    var link = ''
-    var titleLength = 0
-    var linkLength = 0
-    var dottedLineA = ' ' //starts with one whitespace
-    var dottedLineB = ' ' //starts with one whitespace
+    let title = '';
+    let link = '';
+    let titleLength = 0;
+    let linkLength = 0;
+    let dottedLineA = ' '; //starts with one whitespace
+    let dottedLineB = ' '; //starts with one whitespace
 
     if (news[z][0][0].indexOf('comments') === -1) {
-      title = news[z][0]
-      link = 'https://www.nytimes.com' + news[z][1]
-      title.length > 100 ? title = title.substring(0, 100) + '...' : null
-      titleLength = title.length
+      title = news[z][0];
+      link = news[z][1].indexOf('https://www.nytimes.com') > -1 ? news[z][1] : 'https://www.nytimes.com' + news[z][1];
+      title.length > 100 ? title = title.substring(0, 100) + '...' : null;
+      titleLength = title.length;
       for (var zz = 0; zz < titleLength + 16; zz++) { //+16 to account to Article, Link, and whitespace
-        dottedLineA = dottedLineA + '-'
+        dottedLineA = dottedLineA + '-';
       }
-      linkLength = link.length
+      linkLength = link.length;
       for (var zzz = 0; zzz < linkLength + 16; zzz++) { //+16 to account to Article, Link, and whitespace
-        dottedLineB = dottedLineB + '-'
+        dottedLineB = dottedLineB + '-';
       }
-      console.log("\n" + dottedLineA)
-      console.log(" | Article: |  " + title.trim() + " | ")
+      console.log("\n" + dottedLineA);
+      console.log(" | Article: |  " + title.trim() + " | ");
       if (dottedLineA.length > dottedLineB.length) {
-        console.log(dottedLineA)
+        console.log(dottedLineA);
       } else {
-        console.log(dottedLineB)
+        console.log(dottedLineB);
       }
-      console.log(" |  Link:   |  " + link + " | ")
-      console.log(dottedLineB)
+      console.log(" |  Link:   |  " + link + " | ");
+      console.log(dottedLineB);
     }
   }
 }
@@ -256,3 +247,10 @@ getData('https://www.nytimes.com')
       .catch(err => new Error(err));
   })
   .catch(error => new Error(error));
+
+module.exports = {
+  getUserAgent,
+  getData,
+  editData,
+  displayData,
+};

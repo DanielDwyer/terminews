@@ -1,19 +1,15 @@
 {
   "name": "terminews",
-  "version": "2.9.62",
+  "version": "2.9.7",
   "description": "Read today's headlines in your terminal, paired with links to bring you to each story.",
   "main": "index.js",
   "scripts": {
-    "news": "node ./dist/index.js",
-    "test": "./node_modules/.bin/mocha",
-    "build:commonjs": "babel index.js --out-dir dist/index.js",
-    "build:umd": "cross-env FILE_NAME=index webpack",
-    "build:umd:min": "cross-env NODE_ENV=production npm run build:umd"
+    "devnews": "node ./index.js",
+    "test": "./node_modules/.bin/mocha"
   },
   "bin": {
     "news": "./bin/index.js"
   },
-  "preferGlobal": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/DanielDwyer/terminews.git"
@@ -41,11 +37,7 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
     "chai": "^4.1.2",
-    "cross-env": "^7.0.2",
     "mocha": "^5.2.0"
   }
 }
