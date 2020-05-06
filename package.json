@@ -1,7 +1,7 @@
 {
   "name": "terminews",
-  "version": "2.9.61",
-  "description": "An updated version of terminews - read today's headlines from your terminal.",
+  "version": "2.9.62",
+  "description": "Read today's headlines in your terminal, paired with links to bring you to each story.",
   "main": "index.js",
   "scripts": {
     "news": "node ./dist/index.js",
@@ -20,12 +20,12 @@
   },
   "keywords": [
     "news",
-    "newspaper",
     "headlines",
-    "current",
-    "today",
-    "events",
-    "terminews"
+    "newspaper",
+    "journalism",
+    "current events",
+    "newspapers",
+    "headline"
   ],
   "author": "danielpatrickdwyer@gmail.com",
   "license": "MIT",
@@ -46,8 +46,6 @@
     "@babel/preset-env": "^7.9.0",
     "chai": "^4.1.2",
     "cross-env": "^7.0.2",
-    "mocha": "^5.2.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "mocha": "^5.2.0"
   }
 }

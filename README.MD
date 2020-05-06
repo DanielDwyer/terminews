@@ -2,7 +2,7 @@
 
 #### Enjoy the news, right from your terminal.
 
-Read the day's headlines from your terminal.
+Read the day's headlines from your terminal paired with links to each article.
 
 ![Downloads](https://img.shields.io/npm/dw/terminews.svg)
 ![Downloads](https://img.shields.io/npm/dm/terminews.svg)
@@ -10,12 +10,7 @@ Read the day's headlines from your terminal.
 ![npm version](https://img.shields.io/npm/v/terminews.svg)
 ![License](https://img.shields.io/npm/l/terminews.svg)
 
-I absolutely love keeping up with all the news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Enjoy!
-
- **Read random news headlines right from your terminal**.
-
- **To read an article (for Mac users), just hold down command and click the link**.
-
+I absolutely love keeping up with all the day's news in our wild world. I may not agree with the newsmakers, but I can appreciate all the journalists and news organizations who work hard, day in and day out, to bring us the news. I am only responsible for bringing the news to the terminal. Enjoy!
 
 ## Getting Started
 
@@ -40,9 +35,7 @@ $ news -4
 
 ![example news](https://i.ibb.co/zV60hr5/Screen-Shot-2020-04-06-at-3-24-45-PM.png)
 
-## Seeking Input & Help
-
-I want to expand and grow this repo. I would love to incorporate some search filters via flags (i.e. -no-politics or -sports) and style the terminal. Each article has a corresponding section (i.e. life or real-estate) and style could be derived from that status. Lastly, I want to bring in more news papers than just the Times. Thanks!
+ **Mac users: To read an article, just hold down command and click the link**.
 
 ## License
 

@@ -1,7 +1,6 @@
 // required modules
 const fetch = require("node-fetch");
 let cheerio = require('cheerio');
-require("regenerator-runtime/runtime");
 
 console.log(`
   ___________                  .__
